@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(197, 197, 197);
+}
+
+.btn {
+  position: absolute;
+  bottom: 80px;
+  outline: none;
+  text-decoration: none;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  height: 45px;
+  width: 130px;
+  opacity: 1;
+  background-color: #ffffff;
+  border: 2px solid rgba(0, 0, 0, 0.6);
+}
+
+.btn .btn-span {
+  color: #000000;
+  font-size: 15px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+}
+
+.btn:hover {
+  animation: btnrotate 0.7s ease-in-out both;
+}
+
+.btn:hover .btn-span {
+  animation: btnstorm 0.7s ease-in-out both;
+  animation-delay: 0.06s;
+}
+
+.square {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32%;
+  height: 32%;
+  cursor: pointer;
+  font-size: 40px;
+  line-height: 60px;
+  user-select: none;
+  font-family: Quicksand;
+  background-color: rgb(197, 197, 197);
+}
+
+.tic-tac-toe {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  background-color: black;
+  width: 360px;
+  height: 360px;
+}
+
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes btnrotate {
+  0% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+  25% {
+    transform: rotate(3deg) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: rotate(-3deg) translate3d(0, 0, 0);
+  }
+  75% {
+    transform: rotate(1deg) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+}
+
+@keyframes btnstorm {
+  0% {
+    transform: translate3d(0, 0, 0) translateZ(0);
+  }
+  25% {
+    transform: translate3d(4px, 0, 0) translateZ(0);
+  }
+  50% {
+    transform: translate3d(-3px, 0, 0) translateZ(0);
+  }
+  75% {
+    transform: translate3d(2px, 0, 0) translateZ(0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) translateZ(0);
+  }
+}
